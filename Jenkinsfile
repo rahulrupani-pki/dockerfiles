@@ -11,7 +11,7 @@ pipeline {
                 stage {
                     steps {
                         script {
-                            dir('apache'){
+                            dir('dockerfiles/docker/apache'){
                                 sh "echo Apache Build"
                                 sh '''
                                     docker build --tag name:apache . 
@@ -25,7 +25,7 @@ pipeline {
                 stage {
                     steps{
                         script {
-                            dir('apache2'){
+                            dir('dockerfiles/docker/apache2'){
                                 sh "echo Apache2 Build"
                                 sh '''
                                     docker build --tag name:apache2  . 
@@ -39,7 +39,7 @@ pipeline {
                 stage {
                     steps{
                         script {
-                            dir('centos'){
+                            dir('dockerfiles/docker/centos'){
                                 sh "echo Centos Build"
                                 sh '''
                                     docker build --tag name:centos . 
@@ -53,7 +53,7 @@ pipeline {
                 stage {
                     steps{
                         script {
-                            dir('centos2'){
+                            dir('dockerfiles/docker/centos2'){
                                 sh "echo Centos2 Build"
                                 sh '''
                                     docker build --tag name:centos2 . 
@@ -67,7 +67,7 @@ pipeline {
                 stage {
                     steps{
                         script {
-                            dir('Python'){
+                            dir('dockerfiles/docker/python'){
                                 sh "echo Python Build"
                                 sh '''
                                     docker build --tag name:python . 
@@ -81,7 +81,7 @@ pipeline {
                 stage {
                     steps{
                         script {
-                            dir('Python2'){
+                            dir('dockerfiles/docker/python2'){
                                 sh "echo Python2 Build"
                                 sh '''
                                     docker build --tag name:python . 
@@ -95,7 +95,7 @@ pipeline {
                 stage {
                     steps{
                         script {
-                            dir('Ubuntu'){
+                            dir('dockerfiles/docker/ubuntu'){
                                 sh "echo Ubuntu Build"
                                 sh '''
                                     docker build --tag name:ubuntu . 
@@ -109,7 +109,7 @@ pipeline {
                 stage {
                     steps{
                         script {
-                            dir('Ubuntu2'){
+                            dir('dockerfiles/docker/ubuntu2'){
                                 sh "echo Ubuntu2 Build"
                                 sh '''
                                     docker build --tag name:ubuntu2 . 
